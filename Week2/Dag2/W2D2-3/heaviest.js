@@ -103,9 +103,7 @@ const superHeros = [
     }
   ]
 
-  const lightSuperHeros = superHeros.filter ((item) =>{
+  const heaviestSuperHero = superHeros.map ((item) => {
 
-    return parsInt(item.weight) < 190    
+    return item.weight
   })
-    console.log (lightSuperHeros);
-  
