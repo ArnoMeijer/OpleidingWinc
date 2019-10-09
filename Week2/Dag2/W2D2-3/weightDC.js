@@ -99,7 +99,7 @@ const superHeros = [
       publisher: "Marvel Comics",
       alter_ego: "Norrin Radd",
       first_appearance: "The Fantastic Four #48",
-      weight: null
+      weight: 0
     }
   ]
 
@@ -108,9 +108,12 @@ const superHeros = [
     return item.publisher === "DC Comics"
   })
 
-  const weightPublisherDC = publisherDC.reduce((totalWeight, item) => {
+ /* const weightPublisherDC = publisherDC.reduce((totalWeight, item) => {
 
     return item.weight +totalWeight
-  }, 0)
+  }, 0)*/
+const weightPublisherDC = publisherDC.reduce ((totalWeight, item)=> {
 
+  return totalWeight.weight + item.weight
+})
   console.log (weightPublisherDC);
